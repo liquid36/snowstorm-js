@@ -1,0 +1,40 @@
+{
+  "name": "snowstorm.js",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "pika build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/liquid36/snowstorm-js",
+  "author": "Mariano Andres Botta (marianoabotta@gmail.com)",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/core": "^2.4.2",
+    "@octokit/endpoint": "^5.5.3",
+    "@octokit/plugin-request-log": "^1.0.0"
+  },
+  "devDependencies": {
+    "@pika/pack": "^0.5.0",
+    "@pika/plugin-build-node": "^0.9.2",
+    "@pika/plugin-build-web": "^0.9.2",
+    "@pika/plugin-ts-standard-pkg": "^0.9.2",
+    "@types/node": "^13.9.3",
+    "node-fetch": "^2.6.0",
+    "typescript": "^3.8.3"
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-ts-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-node"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ]
+    ]
+  }
+}
