@@ -95,7 +95,7 @@
         "getImportJob": "GET /imports/:importId",
         "uploadImportRf2Archive": "POST /imports/:importId/archive"
     },
-    "mrcm": {
+    "mRCM": {
         "retrieveAttributeValues": "GET /mrcm/:branch/attribute-values/:attributeId",
         "retrieveDomainAttributes": "GET /mrcm/:branch/domain-attributes"
     },

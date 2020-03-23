@@ -5,13 +5,13 @@ SnomedCT Snowstorm Client for Javascript
 ## Install
 
 ```
-npm i snowstorm-js --save
+npm i snowstorm.js --save
 ```
 
 ## Usage 
 
 ```javascript
-import { SnowstormJS } from 'snowstorm-js'
+import { SnowstormJS } from 'snowstorm.js'
 
 const snowstorm = new SnowstormJS('http://localhost:8080');
 

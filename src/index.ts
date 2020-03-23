@@ -1,21 +1,21 @@
 import { Octokit as Core } from "@octokit/core";
 import { requestLog } from "@octokit/plugin-request-log";
 
-const ENDPOINT = require('./endpoints.json');
+import { ENDPOINTS } from './endpoints';
 
 const endpointsPlugin = (snowtormJS: Core) => {
-    for (let scope in ENDPOINT) {
-        for (let action in ENDPOINT[scope]) {
-            const [method, url] = ENDPOINT[scope][action].split(' ');
+    for (let scope in ENDPOINTS) {
+        for (let action in ENDPOINTS[scope]) {
+            const [method, url] = ENDPOINTS[scope][action].split(' ');
 
-            ENDPOINT[scope][action] = snowtormJS.request.defaults({
+            ENDPOINTS[scope][action] = snowtormJS.request.defaults({
                 method,
                 url,
                 headers: { 'content-type': 'application/json', 'accept': 'application/json' }
             });
         }
     }
-    return ENDPOINT;
+    return ENDPOINTS;
 }
 
 export const SnowstormJS = class extends Core {

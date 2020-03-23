@@ -32,5 +32,6 @@ fetch('http://172.16.80.80:8080/v2/api-docs')
 
         const json = JSON.stringify(response);
         fs.writeFileSync('./src/endpoints.json', json);
+        fs.writeFileSync('./src/endpoints.ts', 'export const ENDPOINTS = ' + json);
 
     });
