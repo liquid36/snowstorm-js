@@ -33,7 +33,3 @@ export const SnowstormJS = class extends Core {
 
     }
 };
-
-
-const snow = new SnowstormJS('http://172.16.80.80:8080');
-snow.branching.retrieveBranch({ path: 'MAIN/NEUQUEN' }).then(console.log).catch(console.error);
