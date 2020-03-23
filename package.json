@@ -1,8 +1,11 @@
 {
   "name": "snowstorm.js",
   "version": "0.1.0",
-  "description": "",
+  "description": "SnomedCT Snowstorm Client for Javascript",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "pika build",
     "test": "echo \"Error: no test specified\" && exit 1"
